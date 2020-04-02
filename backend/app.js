@@ -25,6 +25,9 @@ app.use((req,res,next)=> {
   next();
 });
 
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
 
 app.post("/api/posts", (req,res,next)=>{
   const post = new Post({
